@@ -1,5 +1,5 @@
 class Fluent::DioFilter < Fluent::Filter
-  Fluent::Plugin.register_filter('date', self)
+  Fluent::Plugin.register_filter('dio', self)
 
   config_param :key, :string, :default => 'time'
 
