@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["hikouki"]
   spec.email         = ["koki.higashikawa@crowdworks.co.jp"]
 
-  spec.summary       = %q{Output filter plugin. to timestamp from strtime}
-  spec.description   = %q{Output filter plugin. to timestamp from strtime}
+  spec.summary       = %q{Output filter plugin of fluentd. Convert to timestamp from date string.}
+  spec.description   = %q{Output filter plugin of fluentd. Convert to timestamp from date string.}
   spec.homepage      = "https://github.com/hikouki/fluent-plugin-dio"
   spec.has_rdoc       = false
   spec.license       = "MIT"

@@ -1,8 +1,6 @@
 # Fluent::Plugin::Dio
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fluent/plugin`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Output filter plugin of fluentd. Convert to timestamp from date string.
 
 ## Installation
 
@@ -22,13 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### DioFilter
 
-## Development
+Add dio filter.
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```xml
+<filter test.**>
+  @type dio
+  keys created_at, updated_at
+</filter>
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Assuming following inputs are coming:
+
+```javascript
+{"a" => 1, "created_at" => "2011-01-02 13:14:15 UTC", "updated_at" => "2011-01-01 13:14:15 UTC"}
+```
+
+Then output becomes as belows:
+
+```javascript
+{"a" => 1, "created_at" => 1293974055, "updated_at" => 1293887655}
+```
 
 ## Contributing
 
