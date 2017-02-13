@@ -1,5 +1,7 @@
 # Fluent::Plugin::Dio
 
+[![Build Status](https://travis-ci.org/hikouki/fluent-plugin-dio.svg?branch=master)](https://travis-ci.org/hikouki/fluent-plugin-dio)
+
 Output filter plugin of fluentd. Convert to timestamp from date string.
 
 ## Installation
